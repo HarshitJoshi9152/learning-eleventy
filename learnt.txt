@@ -1,0 +1,114 @@
+# learning 11ty !
+
+just write to files & run eleventy.
+
+## dev !
+
+`npx @11ty/eleventy` -> GENERATE SITE
+	> outputs to ./_site
+
+`npx @11ty/eleventy --serve` -> RUN DEVELOPMENT SERVER 
+
+	> Important Note: Editing README.md won't refresh your browser automatically, because Browsersync requires a <body> tag in your template for live-reload to work properly. Use Layouts to add a <body> around your Markdown content.
+
+## config
+
+`.eleventy.js` is the default eleventy project config filename.
+
+
+
+### options
+
+> set input/out dir
+`1npx @11ty/eleventy --input=. --output=_site`
+
+> Use only a subset of template types
+npx @11ty/eleventy --formats=md,html,ejs
+
+
+## code !
+
+---
+#this area is called frontmatter ! file info and file data goes in here also for pagination & stuff
+---
+
+
+_includes dir to store data.
+
+/index.html
+/README/index.html
+/fluffy.html
+/snugglepants.html
+/lord-featherbottom.html
+/pennywise.html
+
+damn GLOBAL DATA is so coool !
+	https://www.11ty.dev/docs/data-global/
+	just make a data file in _data/ & assess the object/array with the file's name in all templates !
+
+todo !
+	- COLLECTIONS
+	- template | functions
+
+
+
+keywords
+
+foldername.11tydata.js
+
+_includes
+_data
+
+--front matter : yaml
+permalink
+layout
+pagination
+	data:
+	size:
+	alias: 
+testdata:
+ - item1
+ - item2
+ - item3
+ - item4
+tags: wow
+--
+
+
+
+
+
+
+
+
+
+
+# VS REACT 
+
+react would be more required if we have complex front end logic
+that requires extensive javascript logic in all 
+
+- component scoped js logic and styling
+- react ecosystem & libraries
+
+
+# to learn in Eleventy
+
+Some of the most important concepts to get to grips with are:
+
+Layouts
+Collections
+Pagination
+This doesn't just mean next and previous pages, it can mean generating pages from data, pagination is awesome in 11ty.
+Permalinks
+Data
+Filters
+
+course
+https://piccalil.li/course/learn-eleventy-from-scratch/
+
+
+architecting-data-in-eleventy/
+https://sia.codes/posts/architecting-data-in-eleventy/
+
+https://helloyes.dev/blog/2021/using-parameters-in-your-eleventy-includes-with-nunjucks-macros/

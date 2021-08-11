@@ -1,0 +1,28 @@
+---
+layout: base
+pagination:
+  data: testdata
+  size: 2
+testdata:
+ - item1
+ - item2
+ - item3
+ - item4
+tags: wow
+---
+{# permalink: /dummy-pages.html #}
+{# testdata:
+  itemkey1: itemvalue1
+  itemkey2: itemvalue2
+  itemkey3: itemvalue3 #}
+
+{# <h1>{{testdata.itemkey1}}</h1> #}
+
+<ol>
+{# SO SIZE REFERS TO THE NO OF ITEMS AVAILABLE HERE ! #}
+{# NO OF ITEMS TO BE CIRCULATED PER PAGE #}
+{# is items a special word ? does {{}} not work in frontmatter ? or are permalinks, titles only compatible with static value ? #}
+{%- for item in pagination.items %}
+  <li>{{ item }}</li>
+{% endfor -%}
+</ol>

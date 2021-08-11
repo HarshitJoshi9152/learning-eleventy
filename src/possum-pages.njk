@@ -1,0 +1,14 @@
+---
+pagination:
+    data: possums
+    size: 1
+    alias: data
+layout: "base.njk"
+tags: ["links"]
+permalink: "{{ data.name | slug }}.html"
+eleventyComputed:
+    title: "{{ data.name | slug}}"
+---
+{# title: {{possums.name | slug}} #}
+{# "" makes a lot of difference #}
+<h1> {{ data.name }} is {{ data.age }} years old </h1>

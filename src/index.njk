@@ -1,0 +1,54 @@
+---
+
+layout: base
+title: "hellp !"
+
+---
+
+
+<h1>Hi</h1>
+
+<h2> learning 11ty !</h2>
+
+<p>sitemap !</p>
+{# NOT GENERATED WITH COLLECTIONS #}
+<ul>
+	{%- for data in possums -%}
+		<li>
+			<a href="{{ data.name | slug }}.html">{{ data.name | slug }}.html</a>
+		</li>
+	{%-  endfor -%}
+	<li>
+		<a href="/README/index.html">/README/index.html</a>
+	</li>
+	<li>
+		<a href="/dummy-pages.html">/dummy-pages.html</a>
+	</li>
+	<li>
+		<a href="/index.html">/index.html</a>
+	</li>
+</ul>
+
+<q>should have 4 items !</q>
+<h1>links collection !</h1>
+{%- for a in collections.links-%}
+	<li> 
+		<a href="{{a.url}}" rel="noopener noreferrer"> {{a.data.title}} </a>
+	</li>
+{%endfor%}
+
+
+{# <p>
+	{%- set items = ["log starts here "] -%}
+	{{items | dump}} 
+	{{items | log}}
+	`dump` dumps to the generated page ! , `log` logs to the console
+</p> #}
+
+{# wow collection #}
+<h1>wow pagination ex</h1>
+{%- for a in collections.wow %}
+	<li>
+	<a href="{{a.url}}">{{a.url}}</a>
+	</li>
+{%-endfor-%}
